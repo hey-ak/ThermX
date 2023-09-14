@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/gradient_background"
+    tools:context=".MainActivity">
+
+    <!-- Linear Layout for the title with two text views -->
+    <LinearLayout
+        android:id="@+id/title_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Therm"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="34sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="X"
+            android:textColor="@color/red"
+            android:textSize="34sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="400dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="32dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_layout"
+        app:srcCompat="@drawable/temp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_edit_far"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:hintTextColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/btn_tocel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_far"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/skyblue_darkest"
+            android:hint="@string/enter_temp_in_f"
+            android:textColorHint="@color/black"
+            android:inputType="numberDecimal"
+            android:ems="10" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_tocel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="@color/red_deep"
+        android:text="@string/to_celcius"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/layout_edit_far"
+        app:layout_constraintTop_toTopOf="@+id/layout_edit_far"
+        app:layout_constraintBottom_toBottomOf="@+id/layout_edit_far" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_edit_cel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:hintTextColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/btn_tofar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_edit_far">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_cel"
+            android:layout_width="match_parent"
+            android:textColor="@color/red"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/black"
+            android:hint="@string/entertemp_in_c"
+            android:inputType="numberDecimal"
+            android:ems="10" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_tofar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="@color/skyblue_darkest"
+        android:text="@string/to_fahrenheit"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/layout_edit_cel"
+        app:layout_constraintTop_toTopOf="@+id/layout_edit_cel"
+        app:layout_constraintBottom_toBottomOf="@+id/layout_edit_cel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

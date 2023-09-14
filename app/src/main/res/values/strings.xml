@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ThermX</string>
+    <string name="fahrenheit_to_celcius">Therm X</string>
+    <string name="enter_temp_in_f">Fahrenheit</string>
+    <string name="to_celcius">To Celsius</string>
+    <string name="entertemp_in_c">Celsius</string>
+    <string name="to_fahrenheit">To Fahrenheit</string>
+</resources>
